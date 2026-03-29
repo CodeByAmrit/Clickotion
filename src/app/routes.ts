@@ -52,4 +52,6 @@ export const router = createBrowserRouter([
       }
     ]
   }
-]);
+], {
+  basename: '/Clickotion'
+});
