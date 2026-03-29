@@ -50,12 +50,16 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center gap-2 md:gap-4">
-            <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-              Sign In
-            </Button>
-            <Button variant="primary" size="sm" className="hidden md:inline-flex">
-              Start Free
-            </Button>
+            <Link to="/login">
+              <Button variant="ghost" size="sm" className="hidden md:inline-flex">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button variant="primary" size="sm" className="hidden md:inline-flex">
+                Start Free
+              </Button>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button
@@ -86,6 +90,21 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
+              <div className="h-px bg-white/10 my-2" />
+              <Link
+                to="/login"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-4 py-2 text-gray-300 hover:text-white transition-colors"
+              >
+                Sign In
+              </Link>
+              <Link
+                to="/signup"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-4 py-2 text-blue-400 font-bold hover:text-blue-300 transition-colors"
+              >
+                Start Free
+              </Link>
             </div>
           </div>
         )}

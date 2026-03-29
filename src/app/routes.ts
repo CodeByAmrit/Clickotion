@@ -7,10 +7,26 @@ import { BlogListing } from './pages/BlogListing';
 import { BlogPost } from './pages/BlogPost';
 import { Contact } from './pages/Contact';
 import { Documentation } from './pages/Documentation';
+import { LoginPage } from './pages/LoginPage';
+import { SignupPage } from './pages/SignupPage';
+import { AuthLayout } from './AuthLayout';
 import { NotFound } from './pages/NotFound';
 
 export const router = createBrowserRouter(
   [
+    {
+      Component: AuthLayout,
+      children: [
+        {
+          path: '/login',
+          Component: LoginPage,
+        },
+        {
+          path: '/signup',
+          Component: SignupPage,
+        },
+      ],
+    },
     {
       path: '/',
       Component: Layout,
