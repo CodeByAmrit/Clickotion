@@ -1,0 +1,15 @@
+# Dependencies & Build
+node_modules/
+dist/
+dist-ssr/
+
+# Environment Variables
+.env*
+
+# Logs & Cache
+*.log
+.cache
+
+# Editor/OS Specific
+.vscode/
+.DS_Store
