@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link to="/" className="inline-block mb-4">
               <img src={iconLogo} alt="Clickotion Icon" className="h-6 md:hidden" />

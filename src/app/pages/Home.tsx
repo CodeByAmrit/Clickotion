@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
-import { 
-  Sparkles, 
-  Zap, 
-  Layout, 
-  Layers, 
-  Blocks, 
-  Gauge, 
+import {
+  Sparkles,
+  Zap,
+  Layout,
+  Layers,
+  Blocks,
+  Gauge,
   ArrowRight,
   Play,
   Code2,
@@ -31,7 +31,7 @@ export function Home() {
   return (
     <>
       <FloatingObjects />
-      
+
       <div className="relative">
         {/* Hero Section */}
         <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 overflow-hidden">
@@ -54,15 +54,15 @@ export function Home() {
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm">Build faster than ever</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight">
                   Build <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">stunning</span> websites in minutes
                 </h1>
-                
+
                 <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                   The ultimate platform for developers, startups, and agencies to create professional websites, dashboards, and tools without the complexity.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
                   <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                     Start Building <ArrowRight className="w-5 h-5" />
@@ -72,7 +72,7 @@ export function Home() {
                     Watch Demo
                   </Button>
                 </div>
-                
+
                 {/* Trust Badges */}
                 <div className="flex flex-wrap items-center gap-8 pt-8 border-t border-white/10">
                   <div className="flex items-center gap-2">
@@ -101,19 +101,19 @@ export function Home() {
                         <div className="w-3 h-3 rounded-full bg-green-500" />
                       </div>
                       <div className="flex-1 px-4 py-1.5 bg-slate-700/50 rounded-lg text-sm text-gray-400">
-                        clickotion.app/builder
+                        clickotion.in/builder
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Dashboard Content */}
                   <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm p-6">
-                    <img 
+                    <img
                       src="https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
                       alt="Dashboard Interface"
                       className="w-full h-auto rounded-xl"
                     />
-                    
+
                     {/* Floating Animation Cards */}
                     <motion.div
                       animate={{ y: [0, -10, 0] }}
@@ -130,7 +130,7 @@ export function Home() {
                         </div>
                       </div>
                     </motion.div>
-                    
+
                     <motion.div
                       animate={{ y: [0, 10, 0] }}
                       transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
@@ -157,7 +157,7 @@ export function Home() {
         <section className="py-12 md:py-16 px-4 md:px-6 border-y border-white/10 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <p className="text-center text-gray-400 mb-12">Trusted by innovative teams worldwide</p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-50">
               {['Vercel', 'GitHub', 'Stripe', 'Linear', 'Notion'].map((brand) => (
                 <div key={brand} className="text-center text-2xl text-white/60">
@@ -293,11 +293,10 @@ export function Home() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 ${
-                      activeTab === tab.id
+                    className={`px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 ${activeTab === tab.id
                         ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
                         : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
-                    }`}
+                      }`}
                   >
                     <Icon className="w-5 h-5" />
                     <span>{tab.label}</span>
@@ -314,13 +313,13 @@ export function Home() {
               transition={{ duration: 0.5 }}
               className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
             >
-              <img 
+              <img
                 src={
-                  activeTab === 'builder' 
+                  activeTab === 'builder'
                     ? "https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
                     : activeTab === 'dashboard'
-                    ? "https://images.unsplash.com/photo-1608306448197-e83633f1261c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBjb2RpbmclMjBzY3JlZW58ZW58MXx8fHwxNzc0NzY2NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    : "https://images.unsplash.com/photo-1758691736843-90f58dce465e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzQ2Njg3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                      ? "https://images.unsplash.com/photo-1608306448197-e83633f1261c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBjb2RpbmclMjBzY3JlZW58ZW58MXx8fHwxNzc0NzY2NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                      : "https://images.unsplash.com/photo-1758691736843-90f58dce465e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzQ2Njg3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 }
                 alt={activeTab}
                 className="w-full h-auto"
@@ -352,17 +351,17 @@ export function Home() {
               >
                 <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   <div className="relative z-10">
                     <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                       <Code2 className="w-8 h-8" />
                     </div>
-                    
+
                     <h3 className="text-2xl mb-4 text-white">For Developers</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       Skip the boilerplate and focus on what matters. Export clean, production-ready code and integrate with your existing workflow.
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm text-gray-300">
                         <Check className="w-4 h-4 text-blue-400" />
@@ -390,17 +389,17 @@ export function Home() {
               >
                 <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   <div className="relative z-10">
                     <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                       <Rocket className="w-8 h-8" />
                     </div>
-                    
+
                     <h3 className="text-2xl mb-4 text-white">For Startups</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       Launch your MVP in days, not months. Beautiful templates and rapid iteration to validate your ideas quickly.
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm text-gray-300">
                         <Check className="w-4 h-4 text-indigo-400" />
@@ -428,17 +427,17 @@ export function Home() {
               >
                 <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   <div className="relative z-10">
                     <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
                       <Users className="w-8 h-8" />
                     </div>
-                    
+
                     <h3 className="text-2xl mb-4 text-white">For Agencies</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       Deliver more projects with less effort. White-label solutions and team collaboration tools to grow your revenue.
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm text-gray-300">
                         <Check className="w-4 h-4 text-purple-400" />
@@ -501,22 +500,20 @@ export function Home() {
                 Simple, <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">transparent</span> pricing
               </h2>
               <p className="text-xl text-gray-400 mb-8">Choose the plan that fits your needs</p>
-              
+
               {/* Yearly Toggle */}
               <div className="inline-flex items-center gap-3 p-1 rounded-full bg-white/5 border border-white/10">
                 <button
                   onClick={() => setIsYearly(false)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    !isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                  }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${!isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                    }`}
                 >
                   Monthly
                 </button>
                 <button
                   onClick={() => setIsYearly(true)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                  }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                    }`}
                 >
                   Yearly
                   <span className="ml-2 text-xs text-green-400">Save 20%</span>
