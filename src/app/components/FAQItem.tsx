@@ -16,11 +16,11 @@ export function FAQItem({ question, answer }: FAQItemProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <span className="text-lg text-white group-hover:text-blue-400 transition-colors">
+        <span className="text-lg text-white group-hover:text-[var(--accent-primary)] transition-colors">
           {question}
         </span>
         <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
-          <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
+          <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-[var(--accent-primary)]" />
         </motion.div>
       </button>
 

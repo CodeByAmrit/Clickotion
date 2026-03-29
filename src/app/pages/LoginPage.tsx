@@ -82,7 +82,7 @@ export function LoginPage() {
             type="email" 
             placeholder="name@company.com" 
             required 
-            className="h-12 bg-white/5 border-slate-800 focus:border-blue-500/50 focus:ring-blue-500/20 rounded-xl transition-all duration-200"
+            className="h-12 bg-white/5 border-slate-800 focus:border-[var(--accent-primary)]/50 focus:ring-[var(--accent-primary)]/20 rounded-xl transition-all duration-200"
           />
         </div>
 
@@ -91,7 +91,7 @@ export function LoginPage() {
             <Label htmlFor="password" title="password" className="text-slate-200">Password</Label>
             <Link 
               to="/forgot-password" 
-              className="text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors"
+              className="text-sm font-medium text-[var(--accent-primary)] hover:opacity-80 transition-colors"
             >
               Forgot?
             </Link>
@@ -115,7 +115,7 @@ export function LoginPage() {
         </div>
 
         <div className="flex items-center space-x-2 ml-1">
-          <Checkbox id="remember" className="border-slate-800 data-[state=checked]:bg-blue-500 data-[state=checked]:border-blue-500" />
+          <Checkbox id="remember" className="border-slate-800 data-[state=checked]:bg-[var(--accent-primary)] data-[state=checked]:border-[var(--accent-primary)]" />
           <Label 
             htmlFor="remember" 
             className="text-sm font-medium text-slate-400 cursor-pointer select-none"
@@ -150,7 +150,7 @@ export function LoginPage() {
         Don&apos;t have an account?{' '}
         <Link 
           to="/signup" 
-          className="font-bold text-blue-500 hover:text-blue-400 underline-offset-4 hover:underline transition-all"
+          className="font-bold text-[var(--accent-primary)] hover:opacity-80 underline-offset-4 hover:underline transition-all"
         >
           Sign up for free
         </Link>

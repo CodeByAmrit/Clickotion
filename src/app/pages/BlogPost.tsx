@@ -72,7 +72,7 @@ export function BlogPost() {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-8">
-            <span className="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-sm">
+            <span className="px-4 py-2 rounded-full bg-[var(--accent-glow)] border border-[var(--accent-primary)]/30 text-[var(--accent-primary)] text-sm">
               {post.category}
             </span>
           </div>
@@ -134,7 +134,7 @@ export function BlogPost() {
                     onClick={() => setActiveSection(item.id)}
                     className={`block w-full text-left px-3 py-2 rounded-lg transition-colors text-sm ${
                       activeSection === item.id
-                        ? 'bg-blue-500/20 text-blue-400'
+                        ? 'bg-[var(--accent-glow)] text-[var(--accent-primary)]'
                         : 'text-gray-400 hover:text-white hover:bg-white/5'
                     }`}
                   >
@@ -173,7 +173,7 @@ export function BlogPost() {
 
                 {/* Code Block */}
                 <div className="my-6 p-6 rounded-xl bg-slate-800/50 border border-white/10">
-                  <code className="text-sm text-blue-300 font-mono">
+                  <code className="text-sm text-[var(--accent-primary)] font-mono">
                     {`import { createApp } from 'clickotion';
 
 const app = createApp({
@@ -196,23 +196,23 @@ app.deploy();`}
 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="w-5 h-5 text-[var(--accent-primary)] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-400">Keep components modular and reusable</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="w-5 h-5 text-[var(--accent-primary)] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-400">
                       Optimize images and assets for web delivery
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="w-5 h-5 text-[var(--accent-primary)] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-400">
                       Implement proper error handling and loading states
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                    <ChevronRight className="w-5 h-5 text-[var(--accent-primary)] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-400">
                       Test across different devices and browsers
                     </span>
@@ -283,7 +283,7 @@ app.deploy();`}
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl group-hover:text-[var(--accent-primary)] transition-colors">
                       {relatedPost.title}
                     </h3>
                   </div>

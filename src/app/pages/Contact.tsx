@@ -42,7 +42,7 @@ export function Contact() {
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
               Let&apos;s build something{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 great
               </span>
             </h1>
@@ -62,14 +62,14 @@ export function Contact() {
             >
               <div className="space-y-8 mb-12">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-xl mb-2">Email Us</h3>
                     <a
                       href="mailto:hello@clickotion.com"
-                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                      className="text-gray-400 hover:text-[var(--accent-primary)] transition-colors"
                     >
                       hello@clickotion.com
                     </a>
@@ -77,14 +77,14 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--accent-secondary)] to-[var(--accent-glow-strong)] flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-xl mb-2">Call Us</h3>
                     <a
                       href="tel:+1234567890"
-                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                      className="text-gray-400 hover:text-[var(--accent-primary)] transition-colors"
                     >
                       +1 (234) 567-8900
                     </a>
@@ -136,7 +136,7 @@ export function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
                         placeholder="John Doe"
                       />
                     </div>
@@ -152,7 +152,7 @@ export function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -168,7 +168,7 @@ export function Contact() {
                         onChange={handleChange}
                         required
                         rows={6}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[var(--accent-primary)] transition-colors resize-none"
                         placeholder="Tell us about your project..."
                       />
                     </div>
@@ -210,7 +210,7 @@ export function Contact() {
 
                 <a
                   href="tel:+1234567890"
-                  className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300 text-center group"
+                  className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[var(--accent-primary)]/50 transition-all duration-300 text-center group"
                 >
                   <div className="text-2xl mb-2">📞</div>
                   <div className="text-sm text-gray-400 group-hover:text-white transition-colors">

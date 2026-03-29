@@ -8,7 +8,7 @@ import { Shield, Users } from 'lucide-react';
 
 export function AuthLayout() {
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-slate-950 text-white selection:bg-blue-500/30">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-slate-950 text-white selection:bg-[var(--accent-primary)]/30">
       {/* Left Side: Branding & Visuals */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -45,7 +45,7 @@ export function AuthLayout() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-blue-100/80 leading-relaxed mb-12"
+            className="text-xl text-gray-300 leading-relaxed mb-12"
           >
             The ultimate operating system for your team. Streamline your workflow, manage projects, and scale your business all in one place.
           </motion.p>
@@ -58,24 +58,24 @@ export function AuthLayout() {
             className="grid grid-cols-2 gap-6"
           >
             <div className="flex flex-col gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="w-8 h-8 rounded-lg bg-blue-400/20 flex items-center justify-center">
-                <Users className="w-4 h-4 text-blue-400" />
+              <div className="w-8 h-8 rounded-lg bg-[var(--accent-glow)] flex items-center justify-center border border-[var(--accent-primary)]/20">
+                <Users className="w-4 h-4 text-[var(--accent-primary)]" />
               </div>
               <div className="font-semibold text-white">300+ Users</div>
-              <div className="text-sm text-blue-200/60">Trusted by modern teams globally.</div>
+              <div className="text-sm text-gray-400">Trusted by modern teams globally.</div>
             </div>
             <div className="flex flex-col gap-2 p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="w-8 h-8 rounded-lg bg-indigo-400/20 flex items-center justify-center">
-                <Shield className="w-4 h-4 text-indigo-400" />
+              <div className="w-8 h-8 rounded-lg bg-[var(--accent-glow)] flex items-center justify-center border border-[var(--accent-primary)]/20">
+                <Shield className="w-4 h-4 text-[var(--accent-primary)]" />
               </div>
               <div className="font-semibold text-white">Secure Auth</div>
-              <div className="text-sm text-blue-200/60">Enterprise-grade security standards.</div>
+              <div className="text-sm text-gray-400">Enterprise-grade security standards.</div>
             </div>
           </motion.div>
         </div>
 
         {/* Bottom: Footer Info */}
-        <div className="relative z-10 text-sm text-blue-100/40">
+        <div className="relative z-10 text-sm text-gray-500">
           © 2026 Clickotion Inc. All rights reserved.
         </div>
       </motion.div>

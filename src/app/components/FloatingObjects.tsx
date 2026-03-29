@@ -9,7 +9,7 @@ export function FloatingObjects() {
       delay: 0,
       duration: 15,
       position: { top: '20%', left: '10%' },
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-[var(--accent-primary)] to-[var(--accent-secondary)]',
     },
     {
       icon: Palette,
@@ -37,7 +37,7 @@ export function FloatingObjects() {
       delay: 1.5,
       duration: 16,
       position: { top: '50%', left: '5%' },
-      color: 'from-indigo-500 to-blue-500',
+      color: 'from-[var(--accent-primary)] to-[var(--accent-secondary)]',
     },
     {
       icon: Layers,
@@ -92,7 +92,7 @@ export function FloatingObjects() {
         }}
       >
         <div className="p-4 rounded-xl bg-slate-800/10 backdrop-blur-sm border border-white/5">
-          <code className="text-xs text-blue-400/30 font-mono">{'<div className="hero" />'}</code>
+          <code className="text-[10px] text-[var(--accent-primary)] opacity-40 font-mono">{'<div className="hero" />'}</code>
         </div>
       </motion.div>
 
@@ -110,7 +110,7 @@ export function FloatingObjects() {
           delay: 1,
         }}
       >
-        <div className="w-20 h-14 rounded-lg bg-gradient-to-br from-blue-500/10 to-indigo-500/10 backdrop-blur-sm border border-white/5" />
+        <div className="w-20 h-14 rounded-lg bg-gradient-to-br from-[var(--accent-primary)]/10 to-[var(--accent-secondary)]/10 backdrop-blur-sm border border-white/5" />
       </motion.div>
     </div>
   );

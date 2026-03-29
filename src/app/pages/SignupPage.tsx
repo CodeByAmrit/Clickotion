@@ -25,7 +25,7 @@ export function SignupPage() {
         <motion.div 
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-2"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-glow)] border border-[var(--accent-primary)]/20 text-[var(--accent-primary)] text-xs font-bold uppercase tracking-wider mb-2"
         >
           <Sparkles className="w-3 h-3" />
           Free for 14 days
@@ -88,7 +88,7 @@ export function SignupPage() {
             id="name" 
             placeholder="John Doe" 
             required 
-            className="h-12 bg-white/5 border-slate-800 focus:border-blue-500/50 focus:ring-blue-500/20 rounded-xl transition-all duration-200"
+            className="h-12 bg-white/5 border-slate-800 focus:border-[var(--accent-primary)]/50 focus:ring-[var(--accent-primary)]/20 rounded-xl transition-all duration-200"
           />
         </div>
 
@@ -99,7 +99,7 @@ export function SignupPage() {
             type="email" 
             placeholder="name@company.com" 
             required 
-            className="h-12 bg-white/5 border-slate-800 focus:border-blue-500/50 focus:ring-blue-500/20 rounded-xl transition-all duration-200"
+            className="h-12 bg-white/5 border-slate-800 focus:border-[var(--accent-primary)]/50 focus:ring-[var(--accent-primary)]/20 rounded-xl transition-all duration-200"
           />
         </div>
 
@@ -111,7 +111,7 @@ export function SignupPage() {
               type={showPassword ? 'text' : 'password'} 
               placeholder="Min. 8 characters" 
               required 
-              className="h-12 bg-white/5 border-slate-800 focus:border-blue-500/50 focus:ring-blue-500/20 rounded-xl pr-10 transition-all duration-200"
+              className="h-12 bg-white/5 border-slate-800 focus:border-[var(--accent-primary)]/50 focus:ring-[var(--accent-primary)]/20 rounded-xl pr-10 transition-all duration-200"
             />
             <button
               type="button"
@@ -151,7 +151,7 @@ export function SignupPage() {
         Already have an account?{' '}
         <Link 
           to="/login" 
-          className="font-bold text-blue-500 hover:text-blue-400 underline-offset-4 hover:underline transition-all"
+          className="font-bold text-[var(--accent-primary)] hover:opacity-80 underline-offset-4 hover:underline transition-all"
         >
           Login here
         </Link>

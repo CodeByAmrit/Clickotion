@@ -98,7 +98,7 @@ export function BlogListing() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 Insights
               </span>{' '}
               & Stories
@@ -115,7 +115,7 @@ export function BlogListing() {
                 placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
               />
             </div>
           </motion.div>
@@ -141,11 +141,11 @@ export function BlogListing() {
                   </div>
 
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-sm w-fit mb-4">
+                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--accent-glow)] border border-[var(--accent-primary)]/30 text-[var(--accent-primary)] text-sm w-fit mb-4">
                       Featured
                     </div>
 
-                    <h2 className="text-3xl lg:text-4xl mb-4 group-hover:text-blue-400 transition-colors">
+                    <h2 className="text-3xl lg:text-4xl mb-4 group-hover:text-[var(--accent-primary)] transition-colors">
                       {featuredPost.title}
                     </h2>
 
@@ -187,14 +187,14 @@ export function BlogListing() {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-500/30 text-blue-300 text-xs">
+                        <span className="px-3 py-1 rounded-full bg-[var(--accent-glow)] backdrop-blur-sm border border-[var(--accent-primary)]/30 text-[var(--accent-primary)] text-xs">
                           {post.category}
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <h3 className="text-xl mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                      <h3 className="text-xl mb-3 group-hover:text-[var(--accent-primary)] transition-colors line-clamp-2">
                         {post.title}
                       </h3>
 
@@ -206,7 +206,7 @@ export function BlogListing() {
                           <span>{post.readTime}</span>
                         </div>
 
-                        <ArrowRight className="w-4 h-4 text-blue-400 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="w-4 h-4 text-[var(--accent-primary)] transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
                   </div>

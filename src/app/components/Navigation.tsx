@@ -40,7 +40,7 @@ export function Navigation() {
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.path) ||
                   (link.matchPrefix && location.pathname.startsWith(link.path))
-                    ? 'text-blue-400'
+                    ? 'text-[var(--accent-primary)]'
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
@@ -83,7 +83,7 @@ export function Navigation() {
                   className={`px-4 py-2 rounded-lg transition-colors ${
                     isActive(link.path) ||
                     (link.matchPrefix && location.pathname.startsWith(link.path))
-                      ? 'bg-blue-500/20 text-blue-400'
+                      ? 'bg-[var(--accent-glow)] text-[var(--accent-primary)]'
                       : 'text-gray-300 hover:bg-white/5 hover:text-white'
                   }`}
                 >
@@ -101,7 +101,7 @@ export function Navigation() {
               <Link
                 to="/signup"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-2 text-blue-400 font-bold hover:text-blue-300 transition-colors"
+                className="px-4 py-2 text-[var(--accent-primary)] font-bold hover:opacity-80 transition-colors"
               >
                 Start Free
               </Link>

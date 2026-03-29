@@ -63,7 +63,7 @@ export function FlipWords({ words, duration = 4000, className = "" }: FlipWordsP
                   }
                 }
               }}
-              className="inline-block whitespace-pre bg-gradient-to-t from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent pb-[0.05em]"
+              className="inline-block whitespace-pre bg-gradient-to-t from-[var(--accent-primary)] via-[var(--accent-secondary)] to-[var(--accent-primary)] bg-clip-text text-transparent pb-[0.05em]"
             >
               {char}
             </motion.span>

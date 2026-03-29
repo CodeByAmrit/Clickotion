@@ -24,6 +24,7 @@ import { PricingCard } from '../components/PricingCard';
 import { FAQItem } from '../components/FAQItem';
 import { FloatingObjects } from '../components/FloatingObjects';
 import { FlipWords } from '../components/FlipWords';
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
 export function Home() {
   const [activeTab, setActiveTab] = useState('builder');
@@ -31,6 +32,7 @@ export function Home() {
 
   return (
     <>
+      <ThemeSwitcher />
       <FloatingObjects />
 
       <div className="relative">
@@ -38,8 +40,8 @@ export function Home() {
         <section className="relative pt-16 md:pt-20 pb-12 md:pb-20 px-4 md:px-6 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[var(--accent-glow)] rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[var(--accent-glow-strong)] rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,transparent_0%,rgba(3,2,19,0.5)_100%)]" />
           </div>
 
@@ -52,9 +54,9 @@ export function Home() {
                 transition={{ duration: 0.8 }}
                 className="scale-90 tracking-wide"
               >
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--accent-glow)] border border-[var(--accent-primary)]/20 text-[var(--accent-primary)] mb-6">
                   <Sparkles className="w-4 h-4" />
-                  <span className="text-sm tracking-wider">Build faster than ever</span>
+                  <span className="text-sm tracking-wider font-semibold">Build faster than ever</span>
                 </div>
 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl mb-8 tracking-tighter font-black leading-[1.1] overflow-visible tracking-wide">
@@ -66,7 +68,7 @@ export function Home() {
                   websites in minutes
                 </h1>
 
-                <p className="text-lg md:text-xl text-gray-400/80 mb-8 leading-relaxed max-w-xl">
+                <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-xl">
                   The ultimate platform for developers, startups, and agencies to create
                   professional websites, dashboards, and tools without the complexity.
                 </p>
@@ -85,10 +87,10 @@ export function Home() {
                 <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/5">
                   <div className="flex items-center gap-2">
                     <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    <span className="text-xs text-gray-400 uppercase tracking-wider font-semibold">4.8 rating</span>
+                    <span className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">4.8 rating</span>
                   </div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">300+ customers</div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">99.9% uptime</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">300+ customers</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">99.9% uptime</div>
                 </div>
               </motion.div>
 
@@ -101,9 +103,9 @@ export function Home() {
               >
                 <div className="relative group">
                   {/* Outer Glow */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent-primary)]/30 to-[var(--accent-secondary)]/30 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000" />
 
-                  <div className="relative rounded-[2rem] overflow-hidden bg-slate-900/50 backdrop-blur-xl border border-white/10 shadow-2xl">
+                  <div className="relative rounded-[2rem] overflow-hidden bg-card backdrop-blur-xl border border-primary/10 shadow-2xl">
                     {/* Fake Browser Top Bar */}
                     <div className="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
                       <div className="flex gap-2">
@@ -117,7 +119,7 @@ export function Home() {
                     </div>
 
                     {/* Dashboard Content */}
-                    <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm p-6 relative">
+                    <div className="bg-gradient-to-br from-card/80 to-card backdrop-blur-sm p-6 relative">
                       <img
                         src="https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
                         alt="Dashboard Interface"
@@ -128,7 +130,7 @@ export function Home() {
                       <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 3, repeat: Infinity }}
-                        className="absolute top-24 -left-6 p-4 rounded-2xl bg-blue-500/20 backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
+                        className="absolute top-24 -left-6 p-4 rounded-2xl bg-[var(--accent-glow)] backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
                       >
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
@@ -136,7 +138,7 @@ export function Home() {
                           </div>
                           <div>
                             <div className="text-sm text-white">Deploy Complete</div>
-                            <div className="text-xs text-gray-400">2 mins ago</div>
+                            <div className="text-xs text-muted-foreground">2 mins ago</div>
                           </div>
                         </div>
                       </motion.div>
@@ -144,15 +146,15 @@ export function Home() {
                       <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                        className="absolute bottom-24 -right-6 p-4 rounded-2xl bg-indigo-500/20 backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
+                        className="absolute bottom-24 -right-6 p-4 rounded-2xl bg-[var(--accent-secondary)]/20 backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
                       >
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                            <Zap className="w-5 h-5 text-blue-400" />
+                          <div className="w-10 h-10 rounded-lg bg-[var(--accent-glow)] flex items-center justify-center">
+                            <Zap className="w-5 h-5 text-[var(--accent-primary)]" />
                           </div>
                           <div>
                             <div className="text-sm text-white">Lightning Fast</div>
-                            <div className="text-xs text-gray-400">98/100 score</div>
+                            <div className="text-xs text-muted-foreground">98/100 score</div>
                           </div>
                         </div>
                       </motion.div>
@@ -165,13 +167,13 @@ export function Home() {
         </section>
 
         {/* Trust & Social Proof */}
-        <section className="py-12 md:py-16 px-4 md:px-6 border-y border-white/10 bg-white/5 backdrop-blur-sm">
+        <section className="py-12 md:py-16 px-4 md:px-6 border-y border-primary/5 bg-glass backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
-            <p className="text-center text-gray-400 mb-12">Trusted by innovative teams worldwide</p>
+            <p className="text-center text-muted-foreground mb-12 uppercase tracking-widest text-xs font-bold">Trusted by innovative teams worldwide</p>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 items-center">
               {['Vercel', 'GitHub', 'Stripe', 'Linear', 'Notion'].map((brand) => (
-                <div key={brand} className="text-xl font-bold text-white/20 hover:text-white/40 transition-colors cursor-default select-none tracking-tight">
+                <div key={brand} className="text-xl font-bold text-muted-foreground/30 hover:text-[var(--accent-primary)] transition-colors cursor-default select-none tracking-tight">
                   {brand}
                 </div>
               ))}
@@ -190,11 +192,11 @@ export function Home() {
             >
               <h2 className="text-3xl font-bold mb-2">
                 Loved by{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                   creators
                 </span>
               </h2>
-              <p className="text-lg text-gray-400">See what our users have to say</p>
+              <p className="text-lg text-muted-foreground">See what our users have to say</p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -237,11 +239,11 @@ export function Home() {
             >
               <h2 className="text-3xl font-bold mb-2">
                 Everything you need to{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                   build faster
                 </span>
               </h2>
-              <p className="text-lg text-gray-400">
+              <p className="text-lg text-muted-foreground">
                 Powerful features that make web development effortless
               </p>
             </motion.div>
@@ -288,7 +290,7 @@ export function Home() {
         </section>
 
         {/* Product Showcase */}
-        <section className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
+        <section className="py-8 md:py-16 px-4 md:px-6 bg-glass backdrop-blur-sm border-y border-primary/5">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -297,14 +299,14 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">See it in action</h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-muted-foreground">
                 Explore the powerful features that make Clickotion unique
               </p>
             </motion.div>
 
             {/* Tabs - Segmented Control */}
             <div className="flex justify-center mb-16">
-              <div className="inline-flex p-1.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <div className="inline-flex p-1.5 rounded-2xl bg-glass border border-primary/10 backdrop-blur-sm">
                 {[
                   { id: 'builder', label: 'Builder', icon: Layout },
                   { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
@@ -316,8 +318,8 @@ export function Home() {
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
                       className={`px-8 py-3 rounded-xl flex items-center gap-3 transition-all duration-300 font-semibold text-sm ${activeTab === tab.id
-                        ? 'bg-blue-600 text-white shadow-xl shadow-blue-500/20'
-                        : 'text-gray-400 hover:text-white hover:bg-white/5'
+                        ? 'bg-[var(--accent-primary)] text-white shadow-xl shadow-[var(--accent-primary)]/20'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-glass'
                         }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -334,7 +336,7 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+              className="rounded-3xl overflow-hidden border border-primary/10 shadow-2xl"
             >
               <img
                 src={
@@ -361,7 +363,7 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">Built for everyone</h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-muted-foreground">
                 Whether you&apos;re a developer, startup, or agency
               </p>
             </motion.div>
@@ -374,31 +376,31 @@ export function Home() {
                 transition={{ delay: 0, duration: 0.5 }}
                 className="relative group"
               >
-                <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative h-full p-8 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10 hover:border-primary/20 transition-all duration-300 overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-primary)]/10 to-[var(--accent-secondary)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] flex items-center justify-center">
                       <Code2 className="w-8 h-8" />
                     </div>
 
-                    <h3 className="text-2xl mb-4 text-white">For Developers</h3>
-                    <p className="text-gray-400 mb-6 leading-relaxed">
+                    <h3 className="text-2xl mb-4 text-foreground">For Developers</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
                       Skip the boilerplate and focus on what matters. Export clean, production-ready
                       code and integrate with your existing workflow.
                     </p>
 
                     <div className="space-y-3">
-                      <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-blue-400" />
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-[var(--accent-primary)]" />
                         <span>Ship 10x faster</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-blue-400" />
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-[var(--accent-primary)]" />
                         <span>Full code ownership</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-blue-400" />
+                        <Check className="w-4 h-4 text-[var(--accent-primary)]" />
                         <span>API integrations</span>
                       </div>
                     </div>
@@ -413,27 +415,27 @@ export function Home() {
                 transition={{ delay: 0.1, duration: 0.5 }}
                 className="relative group"
               >
-                <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative h-full p-8 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10 hover:border-primary/20 transition-all duration-300 overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-secondary)]/10 to-[var(--accent-glow-strong)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-[var(--accent-secondary)] to-[var(--accent-glow-strong)] flex items-center justify-center">
                       <Rocket className="w-8 h-8" />
                     </div>
 
-                    <h3 className="text-2xl mb-4 text-white">For Startups</h3>
-                    <p className="text-gray-400 mb-6 leading-relaxed">
+                    <h3 className="text-2xl mb-4 text-foreground">For Startups</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
                       Launch your MVP in days, not months. Beautiful templates and rapid iteration
                       to validate your ideas quickly.
                     </p>
 
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-indigo-400" />
+                        <Check className="w-4 h-4 text-[var(--accent-secondary)]" />
                         <span>Launch in 48 hours</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-indigo-400" />
+                        <Check className="w-4 h-4 text-[var(--accent-secondary)]" />
                         <span>Scale with demand</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -452,27 +454,27 @@ export function Home() {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="relative group"
               >
-                <div className="relative h-full p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
+                <div className="relative h-full p-8 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10 hover:border-primary/20 transition-all duration-300 overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                    <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-[var(--accent-glow-strong)] to-[var(--accent-secondary)] flex items-center justify-center">
                       <Users className="w-8 h-8" />
                     </div>
 
-                    <h3 className="text-2xl mb-4 text-white">For Agencies</h3>
-                    <p className="text-gray-400 mb-6 leading-relaxed">
+                    <h3 className="text-2xl mb-4 text-foreground">For Agencies</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
                       Deliver more projects with less effort. White-label solutions and team
                       collaboration tools to grow your revenue.
                     </p>
 
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-purple-400" />
+                        <Check className="w-4 h-4 text-[var(--accent-glow-strong)]" />
                         <span>3x more clients</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-300">
-                        <Check className="w-4 h-4 text-purple-400" />
+                        <Check className="w-4 h-4 text-[var(--accent-glow-strong)]" />
                         <span>White-label options</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-300">
@@ -488,7 +490,7 @@ export function Home() {
         </section>
 
         {/* Stats */}
-        <section className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
+        <section className="py-8 md:py-16 px-4 md:px-6 bg-glass backdrop-blur-sm border-y border-primary/5">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -505,10 +507,10 @@ export function Home() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="text-center"
                 >
-                  <div className="text-4xl lg:text-5xl bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl lg:text-5xl bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-muted-foreground">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -526,29 +528,29 @@ export function Home() {
             >
               <h2 className="text-4xl lg:text-5xl mb-4">
                 Simple,{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                   transparent
                 </span>{' '}
                 pricing
               </h2>
-              <p className="text-xl text-gray-400 mb-8">Choose the plan that fits your needs</p>
+              <p className="text-xl text-muted-foreground mb-8">Choose the plan that fits your needs</p>
 
               {/* Yearly Toggle */}
-              <div className="inline-flex items-center gap-3 p-1 rounded-full bg-white/5 border border-white/10">
+              <div className="inline-flex items-center gap-3 p-1 rounded-full bg-glass border border-primary/10">
                 <button
                   onClick={() => setIsYearly(false)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${!isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${!isYearly ? 'bg-[var(--accent-primary)] text-white shadow-lg' : 'text-muted-foreground'
                     }`}
                 >
                   Monthly
                 </button>
                 <button
                   onClick={() => setIsYearly(true)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${isYearly ? 'bg-[var(--accent-primary)] text-white shadow-lg' : 'text-muted-foreground'
                     }`}
                 >
                   Yearly
-                  <span className="ml-2 text-xs text-green-400">Save 20%</span>
+                  <span className="ml-2 text-xs text-green-500 font-bold">Save 20%</span>
                 </button>
               </div>
             </motion.div>
@@ -609,7 +611,7 @@ export function Home() {
               />
             </div>
 
-            <p className="text-center text-gray-400 mt-8">
+            <p className="text-center text-muted-foreground mt-8 text-sm">
               All plans include: No credit card required · Cancel anytime · 14-day money-back
               guarantee
             </p>
@@ -617,7 +619,7 @@ export function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
+        <section id="faq" className="py-8 md:py-16 px-4 md:px-6 bg-glass backdrop-blur-sm border-t border-primary/5">
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -626,7 +628,7 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">Frequently asked questions</h2>
-              <p className="text-xl text-gray-400">Everything you need to know about Clickotion</p>
+              <p className="text-xl text-muted-foreground">Everything you need to know about Clickotion</p>
             </motion.div>
 
             <div className="space-y-1">
@@ -661,7 +663,7 @@ export function Home() {
         {/* Final CTA */}
         <section className="py-12 md:py-20 px-4 md:px-6 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[var(--accent-glow)] rounded-full blur-3xl opacity-50" />
           </div>
 
           <div className="relative max-w-4xl mx-auto text-center">
@@ -672,11 +674,11 @@ export function Home() {
             >
               <h2 className="text-4xl lg:text-6xl mb-6">
                 Ready to build something{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                   amazing?
                 </span>
               </h2>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="text-xl text-muted-foreground mb-8 text-balance">
                 Join thousands of developers, startups, and agencies building the web with
                 Clickotion
               </p>

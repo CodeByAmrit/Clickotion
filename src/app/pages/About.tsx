@@ -64,12 +64,12 @@ export function About() {
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
               We build tools that{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 simplify
               </span>{' '}
               web creation
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Empowering creators worldwide to build amazing digital experiences without the
               complexity
             </p>
@@ -85,7 +85,7 @@ export function About() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-400 leading-relaxed">
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Clickotion was born from frustration. We saw talented designers and developers
                   wasting hours on repetitive tasks, fighting with complex tools, and struggling to
@@ -124,11 +124,11 @@ export function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10"
+              className="p-12 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10"
             >
-              <Target className="w-12 h-12 text-blue-400 mb-6" />
+              <Target className="w-12 h-12 text-[var(--accent-primary)] mb-6" />
               <h3 className="text-3xl mb-4">Our Mission</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 To democratize web development by making professional-grade tools accessible to
                 everyone, from solo creators to enterprise teams.
               </p>
@@ -139,11 +139,11 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10"
+              className="p-12 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10"
             >
-              <Award className="w-12 h-12 text-indigo-400 mb-6" />
+              <Award className="w-12 h-12 text-[var(--accent-secondary)] mb-6" />
               <h3 className="text-3xl mb-4">Our Vision</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 A world where anyone with an idea can bring it to life on the web, without technical
                 barriers or steep learning curves.
               </p>
@@ -160,7 +160,7 @@ export function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl mb-4">Our Values</h2>
-            <p className="text-xl text-gray-400">What drives us every day</p>
+            <p className="text-xl text-muted-foreground">What drives us every day</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -173,13 +173,13 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 text-center"
+                  className="p-8 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10 text-center"
                 >
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] flex items-center justify-center">
                     <Icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl mb-3">{value.title}</h3>
-                  <p className="text-gray-400">{value.description}</p>
+                  <p className="text-muted-foreground">{value.description}</p>
                 </motion.div>
               );
             })}
@@ -195,7 +195,7 @@ export function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl mb-4">Meet the Team</h2>
-            <p className="text-xl text-gray-400">The people building the future of web creation</p>
+            <p className="text-xl text-muted-foreground">The people building the future of web creation</p>
           </motion.div>
 
           <div className="grid md:grid-cols-4 gap-8">
@@ -214,10 +214,10 @@ export function About() {
                     alt={member.name}
                     className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <h3 className="text-xl mb-1">{member.name}</h3>
-                <p className="text-gray-400">{member.role}</p>
+                <p className="text-muted-foreground">{member.role}</p>
               </motion.div>
             ))}
           </div>
@@ -225,7 +225,7 @@ export function About() {
 
         {/* Stats */}
         <section className="max-w-5xl mx-auto mb-32">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-12 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 p-12 rounded-3xl bg-glass backdrop-blur-sm border border-primary/10">
             {[
               { value: '50+', label: 'Team Members' },
               { value: '300+', label: 'Customers' },
@@ -240,10 +240,10 @@ export function About() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -258,11 +258,11 @@ export function About() {
           >
             <h2 className="text-4xl lg:text-5xl mb-6">
               Join us on this{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 journey
               </span>
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Start building with Clickotion today and see why thousands of teams choose us
             </p>
             <Button variant="primary" size="lg">

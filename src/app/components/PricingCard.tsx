@@ -35,14 +35,14 @@ export function PricingCard({
       className="relative h-full"
     >
       {popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-xs font-bold text-white shadow-lg z-10">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] rounded-full text-xs font-bold text-white shadow-lg z-10 whitespace-nowrap">
           Most Popular
         </div>
       )}
 
       <div
         className={`h-full p-6 rounded-2xl backdrop-blur-sm transition-all duration-300 ${popular
-            ? 'bg-white/10 border-2 border-blue-500/50 shadow-2xl shadow-blue-500/20'
+            ? 'bg-white/10 border-2 border-[var(--accent-primary)]/50 shadow-2xl shadow-[var(--accent-primary)]/20'
             : 'bg-white/5 border border-white/10 hover:border-white/20'
           }`}
       >
@@ -63,7 +63,7 @@ export function PricingCard({
         <ul className="space-y-3">
           {features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-              <Check className="w-4 h-4 text-blue-400 shrink-0" />
+              <Check className="w-4 h-4 text-[var(--accent-primary)] shrink-0" />
               <span>{feature}</span>
             </li>
           ))}

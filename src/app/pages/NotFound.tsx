@@ -8,7 +8,7 @@ export function NotFound() {
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
-          <div className="text-8xl lg:text-9xl bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4">
+          <div className="text-8xl lg:text-9xl bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent mb-4">
             404
           </div>
           <h1 className="text-4xl lg:text-5xl mb-4">Page Not Found</h1>

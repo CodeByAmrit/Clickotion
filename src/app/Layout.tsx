@@ -22,7 +22,7 @@ export function Layout() {
   }, [location.pathname, location.hash]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-main text-foreground overflow-hidden">
       <Navigation />
       <Outlet />
       <Footer />

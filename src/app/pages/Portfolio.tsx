@@ -87,11 +87,11 @@ export function Portfolio() {
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
               Our{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 Portfolio
               </span>
             </h1>
-            <p className="text-xl text-gray-400 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Explore projects built with Clickotion—from stunning websites to powerful dashboards
             </p>
           </motion.div>
@@ -106,8 +106,8 @@ export function Portfolio() {
                 onClick={() => setFilter(cat.id)}
                 className={`px-6 py-3 rounded-xl transition-all duration-300 ${
                   filter === cat.id
-                    ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                    : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
+                    ? 'bg-[var(--accent-primary)] text-white shadow-lg shadow-[var(--accent-primary)]/25'
+                    : 'bg-glass text-muted-foreground hover:bg-glass/80 hover:text-foreground'
                 }`}
               >
                 {cat.label}
@@ -127,7 +127,7 @@ export function Portfolio() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className="group"
               >
-                <div className="relative h-full rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="relative h-full rounded-3xl overflow-hidden bg-glass backdrop-blur-sm border border-primary/10 hover:border-primary/20 transition-all duration-300">
                   {/* Image */}
                   <div className="relative aspect-video overflow-hidden">
                     <img
@@ -135,11 +135,11 @@ export function Portfolio() {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-xl">
+                      <div className="w-12 h-12 rounded-full bg-[var(--accent-primary)] flex items-center justify-center shadow-xl">
                         <ExternalLink className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -147,14 +147,14 @@ export function Portfolio() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl mb-2 text-white">{project.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                    <h3 className="text-xl mb-2 text-foreground">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, j) => (
                         <span
                           key={j}
-                          className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs"
+                          className="px-3 py-1 rounded-full bg-[var(--accent-glow)] border border-[var(--accent-primary)]/20 text-[var(--accent-primary)] text-xs"
                         >
                           {tag}
                         </span>
@@ -176,14 +176,14 @@ export function Portfolio() {
           >
             <h2 className="text-4xl lg:text-5xl mb-6">
               Ready to build your{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] bg-clip-text text-transparent">
                 project?
               </span>
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Start creating stunning websites and applications today
             </p>
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg shadow-blue-500/25">
+            <button className="px-8 py-4 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] text-white rounded-2xl hover:opacity-90 transition-all duration-200 shadow-lg shadow-[var(--accent-primary)]/25">
               Get Started
             </button>
           </motion.div>
