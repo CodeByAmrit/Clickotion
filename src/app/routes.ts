@@ -9,49 +9,52 @@ import { Contact } from './pages/Contact';
 import { Documentation } from './pages/Documentation';
 import { NotFound } from './pages/NotFound';
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      Component: Layout,
+      children: [
+        {
+          index: true,
+          Component: Home,
+        },
+        {
+          path: 'about',
+          Component: About,
+        },
+        {
+          path: 'portfolio',
+          Component: Portfolio,
+        },
+        {
+          path: 'blog',
+          Component: BlogListing,
+        },
+        {
+          path: 'blog/:id',
+          Component: BlogPost,
+        },
+        {
+          path: 'contact',
+          Component: Contact,
+        },
+        {
+          path: 'docs',
+          Component: Documentation,
+        },
+        {
+          path: 'docs/:section',
+          Component: Documentation,
+        },
+        {
+          path: '*',
+          Component: NotFound,
+        },
+      ],
+    },
+  ],
   {
-    path: '/',
-    Component: Layout,
-    children: [
-      {
-        index: true,
-        Component: Home
-      },
-      {
-        path: 'about',
-        Component: About
-      },
-      {
-        path: 'portfolio',
-        Component: Portfolio
-      },
-      {
-        path: 'blog',
-        Component: BlogListing
-      },
-      {
-        path: 'blog/:id',
-        Component: BlogPost
-      },
-      {
-        path: 'contact',
-        Component: Contact
-      },
-      {
-        path: 'docs',
-        Component: Documentation
-      },
-      {
-        path: 'docs/:section',
-        Component: Documentation
-      },
-      {
-        path: '*',
-        Component: NotFound
-      }
-    ]
-  }
-], {
-  basename: '/Clickotion'
-});
+    basename: '/Clickotion',
+  },
+);

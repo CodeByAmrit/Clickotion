@@ -15,7 +15,7 @@ import {
   Users,
   BarChart3,
   Star,
-  Check
+  Check,
 } from 'lucide-react';
 import { Button } from '../components/Button';
 import { FeatureCard } from '../components/FeatureCard';
@@ -56,11 +56,16 @@ export function Home() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight">
-                  Build <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">stunning</span> websites in minutes
+                  Build{' '}
+                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                    stunning
+                  </span>{' '}
+                  websites in minutes
                 </h1>
 
                 <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-                  The ultimate platform for developers, startups, and agencies to create professional websites, dashboards, and tools without the complexity.
+                  The ultimate platform for developers, startups, and agencies to create
+                  professional websites, dashboards, and tools without the complexity.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
@@ -178,7 +183,10 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">
-                Loved by <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">creators</span>
+                Loved by{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  creators
+                </span>
               </h2>
               <p className="text-xl text-gray-400">See what our users have to say</p>
             </motion.div>
@@ -222,9 +230,14 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">
-                Everything you need to <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">build faster</span>
+                Everything you need to{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  build faster
+                </span>
               </h2>
-              <p className="text-xl text-gray-400">Powerful features that make web development effortless</p>
+              <p className="text-xl text-gray-400">
+                Powerful features that make web development effortless
+              </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -278,7 +291,9 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">See it in action</h2>
-              <p className="text-xl text-gray-400">Explore the powerful features that make Clickotion unique</p>
+              <p className="text-xl text-gray-400">
+                Explore the powerful features that make Clickotion unique
+              </p>
             </motion.div>
 
             {/* Tabs */}
@@ -286,17 +301,18 @@ export function Home() {
               {[
                 { id: 'builder', label: 'Builder', icon: Layout },
                 { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-                { id: 'analytics', label: 'Analytics', icon: Gauge }
+                { id: 'analytics', label: 'Analytics', icon: Gauge },
               ].map((tab) => {
                 const Icon = tab.icon;
                 return (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 ${activeTab === tab.id
+                    className={`px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 ${
+                      activeTab === tab.id
                         ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
                         : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
-                      }`}
+                    }`}
                   >
                     <Icon className="w-5 h-5" />
                     <span>{tab.label}</span>
@@ -316,10 +332,10 @@ export function Home() {
               <img
                 src={
                   activeTab === 'builder'
-                    ? "https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                    ? 'https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080'
                     : activeTab === 'dashboard'
-                      ? "https://images.unsplash.com/photo-1608306448197-e83633f1261c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBjb2RpbmclMjBzY3JlZW58ZW58MXx8fHwxNzc0NzY2NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                      : "https://images.unsplash.com/photo-1758691736843-90f58dce465e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzQ2Njg3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                      ? 'https://images.unsplash.com/photo-1608306448197-e83633f1261c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBjb2RpbmclMjBzY3JlZW58ZW58MXx8fHwxNzc0NzY2NTAzfDA&ixlib=rb-4.1.0&q=80&w=1080'
+                      : 'https://images.unsplash.com/photo-1758691736843-90f58dce465e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NzQ2Njg3NDB8MA&ixlib=rb-4.1.0&q=80&w=1080'
                 }
                 alt={activeTab}
                 className="w-full h-auto"
@@ -338,7 +354,9 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">Built for everyone</h2>
-              <p className="text-xl text-gray-400">Whether you're a developer, startup, or agency</p>
+              <p className="text-xl text-gray-400">
+                Whether you're a developer, startup, or agency
+              </p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -359,7 +377,8 @@ export function Home() {
 
                     <h3 className="text-2xl mb-4 text-white">For Developers</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Skip the boilerplate and focus on what matters. Export clean, production-ready code and integrate with your existing workflow.
+                      Skip the boilerplate and focus on what matters. Export clean, production-ready
+                      code and integrate with your existing workflow.
                     </p>
 
                     <div className="space-y-3">
@@ -397,7 +416,8 @@ export function Home() {
 
                     <h3 className="text-2xl mb-4 text-white">For Startups</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Launch your MVP in days, not months. Beautiful templates and rapid iteration to validate your ideas quickly.
+                      Launch your MVP in days, not months. Beautiful templates and rapid iteration
+                      to validate your ideas quickly.
                     </p>
 
                     <div className="space-y-3">
@@ -435,7 +455,8 @@ export function Home() {
 
                     <h3 className="text-2xl mb-4 text-white">For Agencies</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Deliver more projects with less effort. White-label solutions and team collaboration tools to grow your revenue.
+                      Deliver more projects with less effort. White-label solutions and team
+                      collaboration tools to grow your revenue.
                     </p>
 
                     <div className="space-y-3">
@@ -467,7 +488,7 @@ export function Home() {
                 { value: '300+', label: 'Active Customers' },
                 { value: '10k+', label: 'Sites Created' },
                 { value: '99.9%', label: 'Uptime SLA' },
-                { value: '4.8/5', label: 'User Rating' }
+                { value: '4.8/5', label: 'User Rating' },
               ].map((stat, i) => (
                 <motion.div
                   key={i}
@@ -497,7 +518,11 @@ export function Home() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl lg:text-5xl mb-4">
-                Simple, <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">transparent</span> pricing
+                Simple,{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  transparent
+                </span>{' '}
+                pricing
               </h2>
               <p className="text-xl text-gray-400 mb-8">Choose the plan that fits your needs</p>
 
@@ -505,15 +530,17 @@ export function Home() {
               <div className="inline-flex items-center gap-3 p-1 rounded-full bg-white/5 border border-white/10">
                 <button
                   onClick={() => setIsYearly(false)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${!isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                    }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    !isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                  }`}
                 >
                   Monthly
                 </button>
                 <button
                   onClick={() => setIsYearly(true)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                    }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                  }`}
                 >
                   Yearly
                   <span className="ml-2 text-xs text-green-400">Save 20%</span>
@@ -533,7 +560,7 @@ export function Home() {
                   'Community support',
                   'SSL certificates',
                   'Custom domains',
-                  'Analytics dashboard'
+                  'Analytics dashboard',
                 ]}
                 isYearly={isYearly}
                 index={0}
@@ -551,7 +578,7 @@ export function Home() {
                   'Advanced integrations',
                   'Custom code export',
                   'A/B testing',
-                  'White-label options'
+                  'White-label options',
                 ]}
                 popular={true}
                 isYearly={isYearly}
@@ -570,7 +597,7 @@ export function Home() {
                   'SLA guarantees',
                   'On-premise deployment',
                   'Advanced security',
-                  'Training & onboarding'
+                  'Training & onboarding',
                 ]}
                 isYearly={isYearly}
                 index={2}
@@ -578,7 +605,8 @@ export function Home() {
             </div>
 
             <p className="text-center text-gray-400 mt-8">
-              All plans include: No credit card required · Cancel anytime · 14-day money-back guarantee
+              All plans include: No credit card required · Cancel anytime · 14-day money-back
+              guarantee
             </p>
           </div>
         </section>
@@ -638,10 +666,14 @@ export function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl lg:text-6xl mb-6">
-                Ready to build something <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">amazing?</span>
+                Ready to build something{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  amazing?
+                </span>
               </h2>
               <p className="text-xl text-gray-400 mb-8">
-                Join thousands of developers, startups, and agencies building the web with Clickotion
+                Join thousands of developers, startups, and agencies building the web with
+                Clickotion
               </p>
               <Link to="/contact">
                 <Button variant="primary" size="lg">

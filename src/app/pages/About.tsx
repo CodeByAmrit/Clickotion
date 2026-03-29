@@ -9,47 +9,51 @@ export function About() {
     {
       name: 'Alex Morgan',
       role: 'CEO & Co-founder',
-      avatar: 'https://images.unsplash.com/photo-1622626426572-c268eb006092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW4lMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDcxODc4Nnww&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1622626426572-c268eb006092?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW4lMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDcxODc4Nnww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'Sarah Chen',
       role: 'CTO & Co-founder',
-      avatar: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NDcyNzc0NHww&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NDcyNzc0NHww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'Marcus Johnson',
       role: 'Head of Product',
-      avatar: 'https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDY3OTU3M3ww&ixlib=rb-4.1.0&q=80&w=1080'
+      avatar:
+        'https://images.unsplash.com/photo-1629507208649-70919ca33793?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHBvcnRyYWl0fGVufDF8fHx8MTc3NDY3OTU3M3ww&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       name: 'Emily Watson',
       role: 'Lead Designer',
-      avatar: 'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NDcyNzc0NHww&ixlib=rb-4.1.0&q=80&w=1080'
-    }
+      avatar:
+        'https://images.unsplash.com/photo-1689600944138-da3b150d9cb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHByb2Zlc3Npb25hbCUyMGhlYWRzaG90fGVufDF8fHx8MTc3NDcyNzc0NHww&ixlib=rb-4.1.0&q=80&w=1080',
+    },
   ];
 
   const values = [
     {
       icon: Zap,
       title: 'Speed First',
-      description: 'We believe in rapid development without compromising quality.'
+      description: 'We believe in rapid development without compromising quality.',
     },
     {
       icon: Heart,
       title: 'User-Centric',
-      description: 'Every decision is made with our users\' success in mind.'
+      description: "Every decision is made with our users' success in mind.",
     },
     {
       icon: Globe,
       title: 'Accessibility',
-      description: 'Building tools that everyone can use, anywhere.'
-    }
+      description: 'Building tools that everyone can use, anywhere.',
+    },
   ];
 
   return (
     <>
       <FloatingObjects />
-      
+
       <div className="relative pt-32 pb-20 px-6">
         {/* Hero */}
         <section className="max-w-4xl mx-auto text-center mb-32">
@@ -59,10 +63,15 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
-              We build tools that <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">simplify</span> web creation
+              We build tools that{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                simplify
+              </span>{' '}
+              web creation
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed">
-              Empowering creators worldwide to build amazing digital experiences without the complexity
+              Empowering creators worldwide to build amazing digital experiences without the
+              complexity
             </p>
           </motion.div>
         </section>
@@ -78,23 +87,28 @@ export function About() {
               <h2 className="text-4xl mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-400 leading-relaxed">
                 <p>
-                  Clickotion was born from frustration. We saw talented designers and developers wasting hours on repetitive tasks, fighting with complex tools, and struggling to bring their visions to life.
+                  Clickotion was born from frustration. We saw talented designers and developers
+                  wasting hours on repetitive tasks, fighting with complex tools, and struggling to
+                  bring their visions to life.
                 </p>
                 <p>
-                  In 2024, we set out to change that. We built Clickotion to be the platform we wished existed—fast, flexible, and focused on what matters: creating great web experiences.
+                  In 2024, we set out to change that. We built Clickotion to be the platform we
+                  wished existed—fast, flexible, and focused on what matters: creating great web
+                  experiences.
                 </p>
                 <p>
-                  Today, thousands of teams use Clickotion to build websites, dashboards, and tools that power their businesses. We're just getting started.
+                  Today, thousands of teams use Clickotion to build websites, dashboards, and tools
+                  that power their businesses. We're just getting started.
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1758691737045-3ece61135061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHRlYW0lMjBtZWV0aW5nJTIwYnJhaW5zdG9ybXxlbnwxfHx8fDE3NzQ3Njc0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Team collaboration"
                 className="rounded-3xl shadow-2xl"
@@ -115,7 +129,8 @@ export function About() {
               <Target className="w-12 h-12 text-blue-400 mb-6" />
               <h3 className="text-3xl mb-4">Our Mission</h3>
               <p className="text-gray-400 leading-relaxed">
-                To democratize web development by making professional-grade tools accessible to everyone, from solo creators to enterprise teams.
+                To democratize web development by making professional-grade tools accessible to
+                everyone, from solo creators to enterprise teams.
               </p>
             </motion.div>
 
@@ -129,7 +144,8 @@ export function About() {
               <Award className="w-12 h-12 text-indigo-400 mb-6" />
               <h3 className="text-3xl mb-4">Our Vision</h3>
               <p className="text-gray-400 leading-relaxed">
-                A world where anyone with an idea can bring it to life on the web, without technical barriers or steep learning curves.
+                A world where anyone with an idea can bring it to life on the web, without technical
+                barriers or steep learning curves.
               </p>
             </motion.div>
           </div>
@@ -193,7 +209,7 @@ export function About() {
                 className="group"
               >
                 <div className="relative mb-6 overflow-hidden rounded-3xl">
-                  <img 
+                  <img
                     src={member.avatar}
                     alt={member.name}
                     className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
@@ -214,7 +230,7 @@ export function About() {
               { value: '50+', label: 'Team Members' },
               { value: '300+', label: 'Customers' },
               { value: '10k+', label: 'Projects' },
-              { value: '99.9%', label: 'Uptime' }
+              { value: '99.9%', label: 'Uptime' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -241,7 +257,10 @@ export function About() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl mb-6">
-              Join us on this <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">journey</span>
+              Join us on this{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                journey
+              </span>
             </h2>
             <p className="text-xl text-gray-400 mb-8">
               Start building with Clickotion today and see why thousands of teams choose us

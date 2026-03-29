@@ -9,7 +9,7 @@ interface FAQItemProps {
 
 export function FAQItem({ question, answer }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <div className="border-b border-white/10">
       <button
@@ -19,14 +19,11 @@ export function FAQItem({ question, answer }: FAQItemProps) {
         <span className="text-lg text-white group-hover:text-blue-400 transition-colors">
           {question}
         </span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
           <ChevronDown className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
         </motion.div>
       </button>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -36,9 +33,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-gray-400 leading-relaxed">
-              {answer}
-            </p>
+            <p className="pb-6 text-gray-400 leading-relaxed">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

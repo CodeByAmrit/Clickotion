@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Search, Book, Code, Rocket, Settings, ChevronRight, Copy, ThumbsUp, ThumbsDown } from 'lucide-react';
+import {
+  Search,
+  Book,
+  Code,
+  Rocket,
+  Settings,
+  ChevronRight,
+  Copy,
+  ThumbsUp,
+  ThumbsDown,
+} from 'lucide-react';
 
 export function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -14,8 +24,8 @@ export function Documentation() {
       items: [
         { id: 'getting-started', label: 'Introduction' },
         { id: 'installation', label: 'Installation' },
-        { id: 'quick-start', label: 'Quick Start' }
-      ]
+        { id: 'quick-start', label: 'Quick Start' },
+      ],
     },
     {
       title: 'Core Concepts',
@@ -23,8 +33,8 @@ export function Documentation() {
       items: [
         { id: 'components', label: 'Components' },
         { id: 'templates', label: 'Templates' },
-        { id: 'styling', label: 'Styling' }
-      ]
+        { id: 'styling', label: 'Styling' },
+      ],
     },
     {
       title: 'API Reference',
@@ -32,8 +42,8 @@ export function Documentation() {
       items: [
         { id: 'api-overview', label: 'Overview' },
         { id: 'api-auth', label: 'Authentication' },
-        { id: 'api-endpoints', label: 'Endpoints' }
-      ]
+        { id: 'api-endpoints', label: 'Endpoints' },
+      ],
     },
     {
       title: 'Configuration',
@@ -41,9 +51,9 @@ export function Documentation() {
       items: [
         { id: 'config-overview', label: 'Overview' },
         { id: 'config-deployment', label: 'Deployment' },
-        { id: 'config-env', label: 'Environment' }
-      ]
-    }
+        { id: 'config-env', label: 'Environment' },
+      ],
+    },
   ];
 
   const handleCopyCode = () => {
@@ -58,7 +68,7 @@ export function Documentation() {
         <div className="max-w-7xl mx-auto">
           <div className="relative max-w-2xl">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input 
+            <input
               type="text"
               placeholder="Search documentation..."
               value={searchQuery}
@@ -116,9 +126,10 @@ export function Documentation() {
                 {activeSection === 'getting-started' && (
                   <article className="prose prose-invert max-w-none">
                     <h1 className="text-4xl lg:text-5xl mb-6">Getting Started with Clickotion</h1>
-                    
+
                     <p className="text-xl text-gray-400 leading-relaxed mb-8">
-                      Welcome to Clickotion! This guide will help you get up and running with our platform in minutes.
+                      Welcome to Clickotion! This guide will help you get up and running with our
+                      platform in minutes.
                     </p>
 
                     <div className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/20 mb-8">
@@ -148,13 +159,17 @@ export function Documentation() {
                         <div className="w-6 h-6 mt-0.5 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
                           <span className="text-green-400 text-xs">✓</span>
                         </div>
-                        <span className="text-gray-400">A Clickotion account (sign up for free)</span>
+                        <span className="text-gray-400">
+                          A Clickotion account (sign up for free)
+                        </span>
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-6 h-6 mt-0.5 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
                           <span className="text-green-400 text-xs">✓</span>
                         </div>
-                        <span className="text-gray-400">Basic understanding of web development (optional)</span>
+                        <span className="text-gray-400">
+                          Basic understanding of web development (optional)
+                        </span>
                       </li>
                     </ul>
 
@@ -174,11 +189,11 @@ export function Documentation() {
                           <span>{copiedCode ? 'Copied!' : 'Copy'}</span>
                         </button>
                       </div>
-                      
+
                       <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 overflow-x-auto">
                         <pre className="text-sm">
                           <code className="text-blue-300 font-mono">
-{`npm install -g clickotion-cli
+                            {`npm install -g clickotion-cli
 # or
 yarn global add clickotion-cli`}
                           </code>
@@ -194,7 +209,7 @@ yarn global add clickotion-cli`}
                     <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10 mb-8">
                       <pre className="text-sm">
                         <code className="text-green-300 font-mono">
-{`clickotion create my-awesome-project
+                          {`clickotion create my-awesome-project
 cd my-awesome-project
 clickotion dev`}
                         </code>
@@ -202,7 +217,10 @@ clickotion dev`}
                     </div>
 
                     <p className="text-gray-400 leading-relaxed mb-8">
-                      Your project will be available at <code className="px-2 py-1 rounded bg-white/5 text-blue-300">http://localhost:3000</code>
+                      Your project will be available at{' '}
+                      <code className="px-2 py-1 rounded bg-white/5 text-blue-300">
+                        http://localhost:3000
+                      </code>
                     </p>
 
                     {/* Tabs Example */}
@@ -218,11 +236,11 @@ clickotion dev`}
                           </button>
                         ))}
                       </div>
-                      
+
                       <div className="p-6 rounded-2xl bg-slate-800/50 border border-white/10">
                         <pre className="text-sm">
                           <code className="text-purple-300 font-mono">
-{`import { Clickotion } from 'clickotion-react';
+                            {`import { Clickotion } from 'clickotion-react';
 
 function App() {
   return (
@@ -241,11 +259,15 @@ function App() {
                       <h2 className="text-2xl mb-4">Next Steps</h2>
                       <div className="grid md:grid-cols-2 gap-4">
                         <button className="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-left transition-colors group">
-                          <h3 className="text-lg mb-2 group-hover:text-blue-400 transition-colors">Components →</h3>
+                          <h3 className="text-lg mb-2 group-hover:text-blue-400 transition-colors">
+                            Components →
+                          </h3>
                           <p className="text-sm text-gray-400">Learn about reusable components</p>
                         </button>
                         <button className="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-left transition-colors group">
-                          <h3 className="text-lg mb-2 group-hover:text-blue-400 transition-colors">Templates →</h3>
+                          <h3 className="text-lg mb-2 group-hover:text-blue-400 transition-colors">
+                            Templates →
+                          </h3>
                           <p className="text-sm text-gray-400">Explore pre-built templates</p>
                         </button>
                       </div>
@@ -272,7 +294,10 @@ function App() {
                 {activeSection !== 'getting-started' && (
                   <article className="prose prose-invert max-w-none">
                     <h1 className="text-4xl lg:text-5xl mb-6">
-                      {navigation.flatMap(s => s.items).find(i => i.id === activeSection)?.label}
+                      {
+                        navigation.flatMap((s) => s.items).find((i) => i.id === activeSection)
+                          ?.label
+                      }
                     </h1>
                     <p className="text-xl text-gray-400 leading-relaxed mb-8">
                       Documentation content for this section coming soon...

@@ -8,7 +8,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -24,14 +24,14 @@ export function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
     <>
       <FloatingObjects />
-      
+
       <div className="relative pt-32 pb-20 px-6">
         {/* Hero */}
         <section className="max-w-4xl mx-auto text-center mb-20">
@@ -41,7 +41,10 @@ export function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
-              Let's build something <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">great</span>
+              Let's build something{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                great
+              </span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed">
               Have a question or want to work together? We'd love to hear from you.
@@ -64,7 +67,10 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl mb-2">Email Us</h3>
-                    <a href="mailto:hello@clickotion.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                    <a
+                      href="mailto:hello@clickotion.com"
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
                       hello@clickotion.com
                     </a>
                   </div>
@@ -76,7 +82,10 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="text-xl mb-2">Call Us</h3>
-                    <a href="tel:+1234567890" className="text-gray-400 hover:text-blue-400 transition-colors">
+                    <a
+                      href="tel:+1234567890"
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
                       +1 (234) 567-8900
                     </a>
                   </div>
@@ -89,8 +98,10 @@ export function Contact() {
                   <div>
                     <h3 className="text-xl mb-2">Visit Us</h3>
                     <p className="text-gray-400">
-                      123 Innovation Street<br />
-                      San Francisco, CA 94105<br />
+                      123 Innovation Street
+                      <br />
+                      San Francisco, CA 94105
+                      <br />
                       United States
                     </p>
                   </div>
@@ -185,22 +196,26 @@ export function Contact() {
 
               {/* Quick Contact Options */}
               <div className="mt-8 grid grid-cols-2 gap-4">
-                <a 
+                <a
                   href="https://wa.me/1234567890"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-500/50 transition-all duration-300 text-center group"
                 >
                   <div className="text-2xl mb-2">💬</div>
-                  <div className="text-sm text-gray-400 group-hover:text-white transition-colors">WhatsApp</div>
+                  <div className="text-sm text-gray-400 group-hover:text-white transition-colors">
+                    WhatsApp
+                  </div>
                 </a>
-                
-                <a 
+
+                <a
                   href="tel:+1234567890"
                   className="p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300 text-center group"
                 >
                   <div className="text-2xl mb-2">📞</div>
-                  <div className="text-sm text-gray-400 group-hover:text-white transition-colors">Call Now</div>
+                  <div className="text-sm text-gray-400 group-hover:text-white transition-colors">
+                    Call Now
+                  </div>
                 </a>
               </div>
             </motion.div>
