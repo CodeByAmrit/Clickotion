@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router';
 import { Button } from './Button';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/006e9bf752f79a6e5e828e1688b8729e6191fbc7.png';
+import iconLogo from '../../assets/logo.svg';
 
 export function Navigation() {
   const location = useLocation();
@@ -25,8 +26,9 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Clickotion" className="h-10" />
+          <Link to="/" className="flex items-center gap-2">
+            <img src={iconLogo} alt="Clickotion Icon" className="h-8 md:hidden" />
+            <img src={logo} alt="Clickotion" className="h-10 hidden md:block" />
           </Link>
           
           {/* Desktop Navigation */}

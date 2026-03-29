@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 import logo from '../../assets/006e9bf752f79a6e5e828e1688b8729e6191fbc7.png';
+import iconLogo from '../../assets/logo.svg';
 
 export function Footer() {
   return (
@@ -10,7 +11,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img src={logo} alt="Clickotion" className="h-8" />
+              <img src={iconLogo} alt="Clickotion Icon" className="h-6 md:hidden" />
+              <img src={logo} alt="Clickotion" className="h-8 hidden md:block" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Build stunning websites, dashboards, and tools in minutes. The modern way to create for the web.
