@@ -13,7 +13,7 @@ export function NotFound() {
           </div>
           <h1 className="text-4xl lg:text-5xl mb-4">Page Not Found</h1>
           <p className="text-xl text-gray-400 mb-8">
-            Oops! The page you're looking for doesn't exist or has been moved.
+            Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </div>
 

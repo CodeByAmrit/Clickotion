@@ -98,7 +98,7 @@ export function About() {
                 </p>
                 <p>
                   Today, thousands of teams use Clickotion to build websites, dashboards, and tools
-                  that power their businesses. We're just getting started.
+                  that power their businesses. We&apos;re just getting started.
                 </p>
               </div>
             </motion.div>

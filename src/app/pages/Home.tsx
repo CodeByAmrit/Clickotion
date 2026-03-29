@@ -355,7 +355,7 @@ export function Home() {
             >
               <h2 className="text-4xl lg:text-5xl mb-4">Built for everyone</h2>
               <p className="text-xl text-gray-400">
-                Whether you're a developer, startup, or agency
+                Whether you&apos;re a developer, startup, or agency
               </p>
             </motion.div>
 

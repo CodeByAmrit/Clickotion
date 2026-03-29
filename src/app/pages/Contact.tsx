@@ -41,13 +41,13 @@ export function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
-              Let's build something{' '}
+              Let&apos;s build something{' '}
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 great
               </span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed">
-              Have a question or want to work together? We'd love to hear from you.
+              Have a question or want to work together? We&apos;d love to hear from you.
             </p>
           </motion.div>
         </section>
@@ -188,7 +188,7 @@ export function Contact() {
                     </div>
                     <h3 className="text-2xl mb-3">Message Sent!</h3>
                     <p className="text-gray-400">
-                      Thank you for reaching out. We'll get back to you within 24 hours.
+                      Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                     </p>
                   </motion.div>
                 )}

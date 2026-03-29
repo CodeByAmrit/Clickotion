@@ -7,6 +7,7 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   onClick?: () => void;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export function Button({
@@ -15,6 +16,7 @@ export function Button({
   size = 'md',
   onClick,
   className = '',
+  type = 'button',
 }: ButtonProps) {
   const variants = {
     primary:
@@ -32,6 +34,7 @@ export function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       className={cn(
         'inline-flex items-center justify-center gap-2 rounded-2xl font-medium transition-all duration-200',

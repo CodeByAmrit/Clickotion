@@ -26,7 +26,7 @@ export function TestimonialCard({
         ))}
       </div>
 
-      <p className="text-gray-300 mb-6 leading-relaxed">"{content}"</p>
+      <p className="text-gray-300 mb-6 leading-relaxed">&quot;{content}&quot;</p>
 
       <div className="flex items-center gap-4">
         <img

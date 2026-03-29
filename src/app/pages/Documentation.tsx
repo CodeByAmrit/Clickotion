@@ -133,7 +133,7 @@ export function Documentation() {
                     </p>
 
                     <div className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/20 mb-8">
-                      <h3 className="text-lg mb-2 text-blue-300">What you'll learn</h3>
+                      <h3 className="text-lg mb-2 text-blue-300">What you&apos;ll learn</h3>
                       <ul className="space-y-2 text-gray-400">
                         <li className="flex items-center gap-2">
                           <ChevronRight className="w-4 h-4 text-blue-400" />

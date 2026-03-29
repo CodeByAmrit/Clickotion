@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 import { Link, useParams } from 'react-router';
 import {
   Clock,
-  User,
   ArrowLeft,
   Share2,
   Twitter,
@@ -13,7 +12,7 @@ import {
 } from 'lucide-react';
 
 export function BlogPost() {
-  const { id } = useParams();
+  useParams();
   const [activeSection, setActiveSection] = useState('introduction');
 
   // Mock data - in real app, fetch based on id
@@ -152,14 +151,14 @@ export function BlogPost() {
               <section id="introduction" className="mb-12">
                 <h2 className="text-3xl mb-4">Introduction</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  In today's fast-paced digital landscape, the ability to quickly build and deploy
+                  In today&apos;s fast-paced digital landscape, the ability to quickly build and deploy
                   web applications is more important than ever. Clickotion revolutionizes this
                   process by providing developers and creators with powerful tools that streamline
                   development without sacrificing quality or flexibility.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
                   This comprehensive guide will walk you through everything you need to know to
-                  build modern, production-ready applications using Clickotion's platform.
+                  build modern, production-ready applications using Clickotion&apos;s platform.
                 </p>
               </section>
 
@@ -167,8 +166,8 @@ export function BlogPost() {
                 <h2 className="text-3xl mb-4">Getting Started</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
                   The first step in your Clickotion journey is understanding the core concepts that
-                  make the platform so powerful. Whether you're coming from traditional development
-                  or exploring no-code tools for the first time, Clickotion's intuitive interface
+                  make the platform so powerful. Whether you&apos;re coming from traditional development
+                  or exploring no-code tools for the first time, Clickotion&apos;s intuitive interface
                   will feel familiar yet refreshingly efficient.
                 </p>
 
@@ -224,13 +223,13 @@ app.deploy();`}
               <section id="advanced-features" className="mb-12">
                 <h2 className="text-3xl mb-4">Advanced Features</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Once you're comfortable with the basics, Clickotion offers advanced features that
+                  Once you&apos;re comfortable with the basics, Clickotion offers advanced features that
                   unlock even more possibilities. From custom integrations to advanced animation
                   systems, these tools help you create truly unique experiences.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  The platform's extensible architecture means you can integrate with virtually any
-                  third-party service or API, giving you complete control over your application's
+                  The platform&apos;s extensible architecture means you can integrate with virtually any
+                  third-party service or API, giving you complete control over your application&apos;s
                   functionality.
                 </p>
               </section>
@@ -238,7 +237,7 @@ app.deploy();`}
               <section id="conclusion" className="mb-12">
                 <h2 className="text-3xl mb-4">Conclusion</h2>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Building modern web applications doesn't have to be complicated. With Clickotion,
+                  Building modern web applications doesn&apos;t have to be complicated. With Clickotion,
                   you have all the tools you need to create professional, scalable applications
                   quickly and efficiently.
                 </p>
