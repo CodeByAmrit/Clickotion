@@ -101,7 +101,7 @@ export function Documentation() {
                     </div>
                   );
                 })}
-              </nav>
+              </div>
             </aside>
 
             {/* Main Content */}

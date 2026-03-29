@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import { Button } from './Button';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/006e9bf752f79a6e5e828e1688b8729e6191fbc7.png';
+import logo from '../../assets/006e9bf752f79a6e5e828e1688b8729e6191fbc7.png';
 
 export function Navigation() {
   const location = useLocation();

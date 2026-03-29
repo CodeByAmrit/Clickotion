@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Code2, Palette, Cursor, Terminal, Box, Layers } from 'lucide-react';
+import { Code2, Palette, MousePointer2 as Cursor, Terminal, Box, Layers } from 'lucide-react';
 
 export function FloatingObjects() {
   const objects = [
