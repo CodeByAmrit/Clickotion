@@ -81,7 +81,7 @@ export function AuthLayout() {
       </motion.div>
 
       {/* Right Side: Auth Forms */}
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen scale-85">
         {/* Mobile Logo */}
         <div className="lg:hidden p-6 flex justify-center">
           <Link to="/" className="flex items-center gap-2">

@@ -23,6 +23,7 @@ import { TestimonialCard } from '../components/TestimonialCard';
 import { PricingCard } from '../components/PricingCard';
 import { FAQItem } from '../components/FAQItem';
 import { FloatingObjects } from '../components/FloatingObjects';
+import { FlipWords } from '../components/FlipWords';
 
 export function Home() {
   const [activeTab, setActiveTab] = useState('builder');
@@ -34,12 +35,12 @@ export function Home() {
 
       <div className="relative">
         {/* Hero Section */}
-        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 overflow-hidden">
+        <section className="relative pt-16 md:pt-20 pb-12 md:pb-20 px-4 md:px-6 overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-            <div className="absolute top-1/3 -right-48 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,transparent_0%,rgba(3,2,19,0.5)_100%)]" />
           </div>
 
           <div className="relative max-w-7xl mx-auto">
@@ -49,108 +50,113 @@ export function Home() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                className="scale-90 tracking-wide"
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 mb-6">
                   <Sparkles className="w-4 h-4" />
-                  <span className="text-sm">Build faster than ever</span>
+                  <span className="text-sm tracking-wider">Build faster than ever</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl mb-8 tracking-tighter font-black leading-[1.1] overflow-visible tracking-wide">
                   Build{' '}
-                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                    stunning
-                  </span>{' '}
+                  <FlipWords
+                    words={['stunning', 'modern', 'powerful', 'premium']}
+                  />
+                  <br />
                   websites in minutes
                 </h1>
 
-                <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-400/80 mb-8 leading-relaxed max-w-xl">
                   The ultimate platform for developers, startups, and agencies to create
                   professional websites, dashboards, and tools without the complexity.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
-                  <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
-                    Start Building <ArrowRight className="w-5 h-5" />
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 mb-12">
+                  <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center py-3">
+                    Start Building <ArrowRight className="w- h-5" />
                   </Button>
-                  <Button variant="secondary" size="lg" className="w-full sm:w-auto justify-center">
+                  <Button variant="secondary" size="lg" className="w-full sm:w-auto justify-center py-3">
                     <Play className="w-5 h-5" />
                     Watch Demo
                   </Button>
                 </div>
 
                 {/* Trust Badges */}
-                <div className="flex flex-wrap items-center gap-8 pt-8 border-t border-white/10">
+                <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/5">
                   <div className="flex items-center gap-2">
-                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    <span className="text-sm text-gray-400">4.8 rating</span>
+                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <span className="text-xs text-gray-400 uppercase tracking-wider font-semibold">4.8 rating</span>
                   </div>
-                  <div className="text-sm text-gray-400">300+ customers</div>
-                  <div className="text-sm text-gray-400">99.9% uptime</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">300+ customers</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-wider font-semibold">99.9% uptime</div>
                 </div>
               </motion.div>
 
               {/* Right: Interactive Dashboard Mockup */}
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
                 className="relative"
               >
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/10">
-                  {/* Dashboard Header */}
-                  <div className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 px-6 py-4">
-                    <div className="flex items-center gap-3">
+                <div className="relative group">
+                  {/* Outer Glow */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000" />
+
+                  <div className="relative rounded-[2rem] overflow-hidden bg-slate-900/50 backdrop-blur-xl border border-white/10 shadow-2xl">
+                    {/* Fake Browser Top Bar */}
+                    <div className="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
                       <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                        <div className="w-3 h-3 rounded-full bg-green-500" />
+                        <div className="w-3 h-3 rounded-full bg-white/10" />
+                        <div className="w-3 h-3 rounded-full bg-white/10" />
+                        <div className="w-3 h-3 rounded-full bg-white/10" />
                       </div>
-                      <div className="flex-1 px-4 py-1.5 bg-slate-700/50 rounded-lg text-sm text-gray-400">
-                        clickotion.in/builder
+                      <div className="flex-1 px-4 py-1 bg-white/5 rounded-lg text-xs text-gray-500 font-medium">
+                        dashboard.clickotion.in
                       </div>
                     </div>
-                  </div>
 
-                  {/* Dashboard Content */}
-                  <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm p-6">
-                    <img
-                      src="https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
-                      alt="Dashboard Interface"
-                      className="w-full h-auto rounded-xl"
-                    />
+                    {/* Dashboard Content */}
+                    <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm p-6 relative">
+                      <img
+                        src="https://images.unsplash.com/photo-1732203971761-e9d4a6f5e93f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB0ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3NDc1OTM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                        alt="Dashboard Interface"
+                        className="w-full h-auto rounded-xl"
+                      />
 
-                    {/* Floating Animation Cards */}
-                    <motion.div
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute top-24 -left-6 p-4 rounded-2xl bg-blue-500/20 backdrop-blur-xl border border-white/20 shadow-xl"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
-                          <Check className="w-5 h-5 text-green-400" />
+                      {/* Floating Animation Cards */}
+                      <motion.div
+                        animate={{ y: [0, -10, 0] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="absolute top-24 -left-6 p-4 rounded-2xl bg-blue-500/20 backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
+                            <Check className="w-5 h-5 text-green-400" />
+                          </div>
+                          <div>
+                            <div className="text-sm text-white">Deploy Complete</div>
+                            <div className="text-xs text-gray-400">2 mins ago</div>
+                          </div>
                         </div>
-                        <div>
-                          <div className="text-sm text-white">Deploy Complete</div>
-                          <div className="text-xs text-gray-400">2 mins ago</div>
-                        </div>
-                      </div>
-                    </motion.div>
+                      </motion.div>
 
-                    <motion.div
-                      animate={{ y: [0, 10, 0] }}
-                      transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                      className="absolute bottom-24 -right-6 p-4 rounded-2xl bg-indigo-500/20 backdrop-blur-xl border border-white/20 shadow-xl"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                          <Zap className="w-5 h-5 text-blue-400" />
+                      <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                        className="absolute bottom-24 -right-6 p-4 rounded-2xl bg-indigo-500/20 backdrop-blur-xl border border-white/20 shadow-xl hidden md:block"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                            <Zap className="w-5 h-5 text-blue-400" />
+                          </div>
+                          <div>
+                            <div className="text-sm text-white">Lightning Fast</div>
+                            <div className="text-xs text-gray-400">98/100 score</div>
+                          </div>
                         </div>
-                        <div>
-                          <div className="text-sm text-white">Lightning Fast</div>
-                          <div className="text-xs text-gray-400">98/100 score</div>
-                        </div>
-                      </div>
-                    </motion.div>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -163,9 +169,9 @@ export function Home() {
           <div className="max-w-7xl mx-auto">
             <p className="text-center text-gray-400 mb-12">Trusted by innovative teams worldwide</p>
 
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-50">
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 items-center">
               {['Vercel', 'GitHub', 'Stripe', 'Linear', 'Notion'].map((brand) => (
-                <div key={brand} className="text-center text-2xl text-white/60">
+                <div key={brand} className="text-xl font-bold text-white/20 hover:text-white/40 transition-colors cursor-default select-none tracking-tight">
                   {brand}
                 </div>
               ))}
@@ -180,15 +186,15 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
-              <h2 className="text-4xl lg:text-5xl mb-4">
+              <h2 className="text-3xl font-bold mb-2">
                 Loved by{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   creators
                 </span>
               </h2>
-              <p className="text-xl text-gray-400">See what our users have to say</p>
+              <p className="text-lg text-gray-400">See what our users have to say</p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -221,21 +227,21 @@ export function Home() {
         </section>
 
         {/* Core Features */}
-        <section id="features" className="py-16 md:py-24 px-4 md:px-6">
+        <section id="features" className="py-8 md:py-16 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-10"
             >
-              <h2 className="text-4xl lg:text-5xl mb-4">
+              <h2 className="text-3xl font-bold mb-2">
                 Everything you need to{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   build faster
                 </span>
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-lg text-gray-400">
                 Powerful features that make web development effortless
               </p>
             </motion.div>
@@ -282,7 +288,7 @@ export function Home() {
         </section>
 
         {/* Product Showcase */}
-        <section className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
+        <section className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -296,29 +302,30 @@ export function Home() {
               </p>
             </motion.div>
 
-            {/* Tabs */}
-            <div className="flex justify-center gap-4 mb-12">
-              {[
-                { id: 'builder', label: 'Builder', icon: Layout },
-                { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
-                { id: 'analytics', label: 'Analytics', icon: Gauge },
-              ].map((tab) => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-xl flex items-center gap-2 transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                        : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'
-                    }`}
-                  >
-                    <Icon className="w-5 h-5" />
-                    <span>{tab.label}</span>
-                  </button>
-                );
-              })}
+            {/* Tabs - Segmented Control */}
+            <div className="flex justify-center mb-16">
+              <div className="inline-flex p-1.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                {[
+                  { id: 'builder', label: 'Builder', icon: Layout },
+                  { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
+                  { id: 'analytics', label: 'Analytics', icon: Gauge },
+                ].map((tab) => {
+                  const Icon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`px-8 py-3 rounded-xl flex items-center gap-3 transition-all duration-300 font-semibold text-sm ${activeTab === tab.id
+                        ? 'bg-blue-600 text-white shadow-xl shadow-blue-500/20'
+                        : 'text-gray-400 hover:text-white hover:bg-white/5'
+                        }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      <span>{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Tab Content */}
@@ -345,7 +352,7 @@ export function Home() {
         </section>
 
         {/* Use Cases */}
-        <section id="use-cases" className="py-16 md:py-24 px-4 md:px-6">
+        <section id="use-cases" className="py-8 md:py-16 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -481,7 +488,7 @@ export function Home() {
         </section>
 
         {/* Stats */}
-        <section className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
+        <section className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -509,7 +516,7 @@ export function Home() {
         </section>
 
         {/* Pricing */}
-        <section id="pricing" className="py-16 md:py-24 px-4 md:px-6">
+        <section id="pricing" className="py-8 md:py-16 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -530,17 +537,15 @@ export function Home() {
               <div className="inline-flex items-center gap-3 p-1 rounded-full bg-white/5 border border-white/10">
                 <button
                   onClick={() => setIsYearly(false)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    !isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                  }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${!isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                    }`}
                 >
                   Monthly
                 </button>
                 <button
                   onClick={() => setIsYearly(true)}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
-                  }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${isYearly ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400'
+                    }`}
                 >
                   Yearly
                   <span className="ml-2 text-xs text-green-400">Save 20%</span>
@@ -612,7 +617,7 @@ export function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
+        <section id="faq" className="py-8 md:py-16 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -654,7 +659,7 @@ export function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-hidden">
+        <section className="py-12 md:py-20 px-4 md:px-6 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
           </div>

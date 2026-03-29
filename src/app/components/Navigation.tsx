@@ -23,25 +23,25 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#010103]/60 border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={iconLogo} alt="Clickotion Icon" className="h-8 md:hidden" />
-            <img src={logo} alt="Clickotion" className="h-10 hidden md:block" />
+            <img src={iconLogo} alt="Clickotion Icon" className="h-6 md:hidden" />
+            <img src={logo} alt="Clickotion" className="h-7 hidden md:block" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`transition-colors ${
+                className={`text-sm font-medium transition-colors ${
                   isActive(link.path) ||
                   (link.matchPrefix && location.pathname.startsWith(link.path))
                     ? 'text-blue-400'
-                    : 'text-gray-300 hover:text-white'
+                    : 'text-gray-400 hover:text-white'
                 }`}
               >
                 {link.label}
