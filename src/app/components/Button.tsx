@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from './ui/utils';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -15,8 +16,6 @@ export function Button({
   onClick,
   className = ''
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 rounded-2xl font-medium transition-all duration-200';
-  
   const variants = {
     primary: 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105',
     secondary: 'bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20 hover:border-white/30',
@@ -32,7 +31,12 @@ export function Button({
   return (
     <button 
       onClick={onClick}
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={cn(
+        'inline-flex items-center justify-center gap-2 rounded-2xl font-medium transition-all duration-200',
+        variants[variant],
+        sizes[size],
+        className
+      )}
     >
       {children}
     </button>

@@ -24,7 +24,7 @@ export function Navigation() {
   
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-slate-900/50 border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <img src={iconLogo} alt="Clickotion Icon" className="h-8 md:hidden" />
@@ -48,9 +48,9 @@ export function Navigation() {
             ))}
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Button variant="ghost" size="sm" className="hidden md:inline-flex">Sign In</Button>
-            <Button variant="primary" size="sm">Start Free</Button>
+            <Button variant="primary" size="sm" className="hidden md:inline-flex">Start Free</Button>
             
             {/* Mobile Menu Button */}
             <button

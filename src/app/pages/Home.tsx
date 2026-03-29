@@ -34,7 +34,7 @@ export function Home() {
       
       <div className="relative">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        <section className="relative pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
@@ -55,7 +55,7 @@ export function Home() {
                   <span className="text-sm">Build faster than ever</span>
                 </div>
                 
-                <h1 className="text-5xl lg:text-7xl mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight">
                   Build <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">stunning</span> websites in minutes
                 </h1>
                 
@@ -63,11 +63,11 @@ export function Home() {
                   The ultimate platform for developers, startups, and agencies to create professional websites, dashboards, and tools without the complexity.
                 </p>
                 
-                <div className="flex flex-wrap items-center gap-4 mb-12">
-                  <Button variant="primary" size="lg">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+                  <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                     Start Building <ArrowRight className="w-5 h-5" />
                   </Button>
-                  <Button variant="secondary" size="lg">
+                  <Button variant="secondary" size="lg" className="w-full sm:w-auto justify-center">
                     <Play className="w-5 h-5" />
                     Watch Demo
                   </Button>
@@ -154,7 +154,7 @@ export function Home() {
         </section>
 
         {/* Trust & Social Proof */}
-        <section className="py-16 px-6 border-y border-white/10 bg-white/5 backdrop-blur-sm">
+        <section className="py-12 md:py-16 px-4 md:px-6 border-y border-white/10 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <p className="text-center text-gray-400 mb-12">Trusted by innovative teams worldwide</p>
             
@@ -169,7 +169,7 @@ export function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-6">
+        <section className="py-16 md:py-24 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ export function Home() {
         </section>
 
         {/* Core Features */}
-        <section id="features" className="py-20 px-6">
+        <section id="features" className="py-16 md:py-24 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -269,7 +269,7 @@ export function Home() {
         </section>
 
         {/* Product Showcase */}
-        <section className="py-20 px-6 bg-white/5 backdrop-blur-sm">
+        <section className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -330,7 +330,7 @@ export function Home() {
         </section>
 
         {/* Use Cases */}
-        <section id="use-cases" className="py-20 px-6">
+        <section id="use-cases" className="py-16 md:py-24 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -461,7 +461,7 @@ export function Home() {
         </section>
 
         {/* Stats */}
-        <section className="py-20 px-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
+        <section className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm border-y border-white/10">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -489,7 +489,7 @@ export function Home() {
         </section>
 
         {/* Pricing */}
-        <section id="pricing" className="py-20 px-6">
+        <section id="pricing" className="py-16 md:py-24 px-4 md:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -587,7 +587,7 @@ export function Home() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="py-20 px-6 bg-white/5 backdrop-blur-sm">
+        <section id="faq" className="py-16 md:py-24 px-4 md:px-6 bg-white/5 backdrop-blur-sm">
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -629,7 +629,7 @@ export function Home() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 px-6 relative overflow-hidden">
+        <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
           </div>
